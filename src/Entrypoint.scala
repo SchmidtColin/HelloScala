@@ -15,16 +15,17 @@ object Entrypoint {
     println(testList contains 41)
     println(testList size)
 
-  val mathe = new Mathe()
-    println(mathe.fakultaet(4))
+    val mathe = new Mathe()
+    println(mathe.factorial(4))
+    print(mathe.theZero(6, 5))
   }
-
-  def sumOfOdds(xs: Seq[Int]): Int = xs filter { _%2 != 0 } sum
 
   def createName(name:String):String = {
     def loop(i: Int, s: String): String =
       if (i < name.length) loop(i + 1, s+name.charAt(i)) else s
     loop(0, "")
   }
+
+
 
 }
