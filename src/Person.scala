@@ -1,17 +1,15 @@
 /**
   * Created by cw on 15.12.2016.
   */
-class Person(val name: String, val age: Int){
+class Person(private var nameOfBirth: String, private var curAge: Int){
 
-  def sumOfOdds(xs: Seq[Int]): Int = xs filter { _%2 != 0 } sum
-  def printName = {println("Name: " + name + " Alter: " + age)}
+  //Getter
+  def age = curAge
+  //Setter
+  def age_=(value:Int) = curAge = value
 
-  val createName = {
-    def loop(i: Int, s: String): String =
-      if (i < name.length) loop(i + 1, s+name(i)) else s
-    loop(0, "")
-  }
+  def name: String = nameOfBirth
+  def name_=(value:String) = nameOfBirth = value
 
-  val revertName = name.reverse
 
 }
