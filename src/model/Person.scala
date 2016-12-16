@@ -1,3 +1,5 @@
+package model
+
 /**
   * Created by cw on 15.12.2016.
   */
@@ -11,8 +13,8 @@ class Person(private var nameOfBirth: String, private var curAge: Int){
 
   //Getter
   def name: String = nameOfBirth
-  def age = curAge
+  def age: Int = curAge
   //Setter
-  def name_=(value:String) = nameOfBirth = value
-  def age_=(value:Int) = curAge = value
+  def name_=(value:String): Unit = nameOfBirth = value
+  def age_=(value:Int): Unit = curAge = value
 }
