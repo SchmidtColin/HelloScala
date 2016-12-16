@@ -1,12 +1,15 @@
-import scala.collection.mutable.{ArrayBuffer}
+package model
+
+import scala.collection.mutable.ArrayBuffer
 
 /**
   * Created by cw on 15.12.2016.
   */
 class Mathe {
-  val FIRST_ZERO = "Erste Nullstelle: "
-  val SECOND_ZERO = "Zweite Nullstelle: "
-  val NO_ZERO = "Keine realen Nullstellen vorhanden!"
+
+  val FIRST_ZERO: String = StringResources.zeroStrings().get(0)
+  val SECOND_ZERO: String = StringResources.zeroStrings().get(1)
+  val NO_ZERO: String = StringResources.zeroStrings().get(2)
 
   def factorial (number : Int) : Int = {
     if(number > 0){

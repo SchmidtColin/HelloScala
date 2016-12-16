@@ -1,3 +1,5 @@
+import model.{Mathe, Person}
+
 /**
   * Created by cw on 15.12.2016.
   */
